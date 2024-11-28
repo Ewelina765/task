@@ -14,12 +14,12 @@ export const useGetListData = () => {
   const query = useQuery({
     queryKey: ["list"],
     queryFn: async () => {
-      await sleep(1000);
+      await sleep(300);
 
-      if (getRandom() > 85) {
-        console.error("An unexpected error occurred!");
-        throw new Error("👀");
-      }
+      // if (getRandom() > 85) {
+      //   console.error("An unexpected error occurred!");
+      //   throw new Error("👀");
+      // }
 
       const mockData = mockJson as Omit<ListItem, "isVisible">[];
 
